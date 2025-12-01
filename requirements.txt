@@ -1,0 +1,3 @@
+stremlit
+openai
+python-dotenv
