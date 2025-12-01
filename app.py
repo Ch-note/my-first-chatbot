@@ -37,7 +37,7 @@ def get_current_weather(location):
     """Get the current weather for a given location"""
     location_lower = location.lower()
     print(f"get_current_weather called with location: {location}")  
-    api_key = "weather_api_key"
+    api_key = weather_api_key
     url = f"https://api.openweathermap.org/data/2.5/weather?q={location}&appid={api_key}&units=metric"
     data = requests.get(url).json()
     temp = data["main"]["temp"]
@@ -246,4 +246,5 @@ if prompt := st.chat_input("무엇을 도와드릴까요?"):
         thread_id=st.session_state.thread_id,
         role="user",
         content=prompt)
+
 
