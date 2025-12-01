@@ -9,7 +9,7 @@ from datetime import datetime
 import zoneinfo
 import requests
 import warnings # 모든 경고 메시지를 무시합니다.
-from IPython.display import Image, display
+
 
 
 warnings.filterwarnings("ignore")
@@ -246,3 +246,4 @@ if prompt := st.chat_input("무엇을 도와드릴까요?"):
         thread_id=st.session_state.thread_id,
         role="user",
         content=prompt)
+
